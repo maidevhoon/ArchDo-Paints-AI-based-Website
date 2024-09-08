@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz-style.css">
+    <title>Personality Quiz - ColorCo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            color: #ff6a88;
+        }
+
+        .quiz-form ol {
+            list-style-position: inside;
+        }
+
+        .quiz-form li {
+            margin-bottom: 20px;
+        }
+
+        .quiz-form label {
+            margin-right: 15px;
+        }
+
+        .quiz-form button {
+            background-color: #ff6a88;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .quiz-form button:hover {
+            background-color: #ff9a8b;
+        }
+
+        .result {
+            display: none;
+            text-align: center;
+            padding: 20px;
+            background-color: #ff9a8b;
+            color: white;
+            border-radius: 8px;
+        }
+
+        .buy-button {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .buy-button a {
+            background-color: #ff6a88;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .buy-button a:hover {
+            background-color: #ff9a8b;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>What's Your Color Personality?</h2>
+        <p>Answer the questions below to find out which paint color matches your personality!</p>
+        <form class="quiz-form" id="quizForm">
+            <ol>
+                <li>
+                    <p>1. How do you approach new challenges?</p>
+                    <label><input type="radio" name="q1" value="A" required> A. I embrace them eagerly.</label>
+                    <label><input type="radio" name="q1" value="B"> B. I feel cautious but intrigued.</label>
+                    <label><input type="radio" name="q1" value="C"> C. I take a methodical approach.</label>
+                    <label><input type="radio" name="q1" value="D"> D. I prefer to avoid them if possible.</label>
+                </li>
+                </li>
+                    <p>2. How do you feel in social settings?</p>
+                    <label><input type="radio" name="q2" value="A" required> A. Energized and excited.</label>
+                    <label><input type="radio" name="q2" value="B"> B. Comfortable, but need a break.</label>
+                    <label><input type="radio" name="q2" value="C"> C. Neutral, it depends on the situation.</label>
+                    <label><input type="radio" name="q2" value="D"> D. Drained and anxious.</label>
+                </li>
+                <li>
+                    <p>3. How do you prefer to make decisions?</p>
+                    <label><input type="radio" name="q3" value="A" required> A. Based on gut feelings.</label>
+                    <label><input type="radio" name="q3" value="B"> B. By weighing the pros and cons.</label>
+                    <label><input type="radio" name="q3" value="C"> C. By analyzing past experiences.</label>
+                    <label><input type="radio" name="q3" value="D"> D. By following established procedures.</label>
+                </li>
+                <li>
+                    <p>4. How do you recharge after a long day?</p>
+                    <label><input type="radio" name="q4" value="A" required> A. Socializing with friends.</label>
+                    <label><input type="radio" name="q4" value="B"> B. Spending time alone in a quiet place.</label>
+                    <label><input type="radio" name="q4" value="C"> C. Engaging in a hobby or activity.</label>
+                    <label><input type="radio" name="q4" value="D"> D. Relaxing at home with minimal stimulation.</label>
+                </li>
+                <li>
+                    <p>5. What motivates you the most?</p>
+                    <label><input type="radio" name="q5" value="A" required> A. Achieving success.</label>
+                    <label><input type="radio" name="q5" value="B"> B. Feeling content and peaceful.</label>
+                    <label><input type="radio" name="q5" value="C"> C. Gaining new knowledge.</label>
+                    <label><input type="radio" name="q5" value="D"> D. Avoiding stress.</label>
+                </li>
+                <li>
+                    <p>6. How do you handle conflict?</p>
+                    <label><input type="radio" name="q6" value="A" required> A. Directly addressing the issue.</label>
+                    <label><input type="radio" name="q6" value="B"> B. Trying to find a compromise.</label>
+                    <label><input type="radio" name="q6" value="C"> C. Avoiding confrontation.</label>
+                    <label><input type="radio" name="q6" value="D"> D. Seeking mediation or advice.</label>
+                </li>
+                <li>
+                    <p>7. What kind of work environment do you prefer?</p>
+                    <label><input type="radio" name="q7" value="A" required> A. Dynamic and fast-paced.</label>
+                    <label><input type="radio" name="q7" value="B"> B. Structured and predictable.</label>
+                    <label><input type="radio" name="q7" value="C"> C. Flexible and open-ended.</label>
+                    <label><input type="radio" name="q7" value="D"> D. Quiet and orderly.</label>
+                </li>
+                <li>
+                    <p>8. How do you prefer to learn new information?</p>
+                    <label><input type="radio" name="q8" value="A" required> A. Through hands-on experience.</label>
+                    <label><input type="radio" name="q8" value="B"> B. By reading and studying.</label>
+                    <label><input type="radio" name="q8" value="C"> C. By discussing with others.</label>
+                    <label><input type="radio" name="q8" value="D"> D. By observing and reflecting.</label>
+                </li>
+                <li>
+                    <p>9. How do you approach tasks?</p>
+                    <label><input type="radio" name="q9" value="A" required> A. With enthusiasm and energy.</label>
+                    <label><input type="radio" name="q9" value="B"> B. Methodically and carefully.</label>
+                    <label><input type="radio" name="q9" value="C"> C. By creating a detailed plan.</label>
+                    <label><input type="radio" name="q9" value="D"> D. By tackling them as they come.</label>
+                </li>
+                <li>
+                    <p>10. What do you value more in your relationships?</p>
+                    <label><input type="radio" name="q10" value="A" required> A. Deep and meaningful connections.</label>
+                    <label><input type="radio" name="q10" value="B"> B. Fun and enjoyable experiences.</label>
+                    <label><input type="radio" name="q10" value="C"> C. Mutual respect and understanding.</label>
+                    <label><input type="radio" name="q10" value="D"> D. Loyalty and reliability.</label>
+                </li>
+                <li>
+                    <p>11. How do you handle changes?</p>
+                    <label><input type="radio" name="q11" value="A" required> A. Embracing them as opportunities.</label>
+                    <label><input type="radio" name="q11" value="B"> B. Adapting gradually.</label>
+                    <label><input type="radio" name="q11" value="C"> C. Seeking stability and consistency.</label>
+                    <label><input type="radio" name="q11" value="D"> D. Avoiding them if possible.</label>
+                </li>
+                <li>
+                    <p>12. How do you prefer to spend your free time?</p>
+                    <label><input type="radio" name="q12" value="A" required> A. Engaging in social activities.</label>
+                    <label><input type="radio" name="q12" value="B"> B. Pursuing hobbies or interests alone.</label>
+                    <label><input type="radio" name="q12" value="C"> C. Relaxing and unwinding.</label>
+                    <label><input type="radio" name="q12" value="D"> D. Exploring new experiences.</label>
+                </li>
+                <li>
+                    <p>13. What is your approach to deadlines?</p>
+                    <label><input type="radio" name="q13" value="A" required> A. Working towards them consistently.</label>
+                    <label><input type="radio" name="q13" value="B"> B. Completing tasks well before the deadline.</label>
+                    <label><input type="radio" name="q13" value="C"> C. Working intensively as the deadline approaches.</label>
+                    <label><input type="radio" name="q13" value="D"> D. Preferring flexible timelines.</label>
+                </li>
+                <li>
+                    <p>14. How do you respond to criticism?</p>
+                    <label><input type="radio" name="q14" value="A" required> A. Accepting it as a chance to improve.</label>
+                    <label><input type="radio" name="q14" value="B"> B. Reflecting on it and taking it constructively.</label>
+                    <label><input type="radio" name="q14" value="C"> C. Taking it personally and feeling discouraged.</label>
+                    <label><input type="radio" name="q14" value="D"> D. Ignoring it if it’s not relevant.</label>
+                </li>
+                <li>
+                    <p>15. How do you approach problem-solving?</p>
+                    <label><input type="radio" name="q15" value="A" required> A. Looking for creative solutions.</label>
+                    <label><input type="radio" name="q15" value="B"> B. Using established methods.</label>
+                    <label><input type="radio" name="q15" value="C"> C. Gathering information and analyzing.</label>
+                    <label><input type="radio" name="q15" value="D"> C. Seeking input from others.</label>
+                </li>
+                <li>
+                    <p>16. What kind of goals do you set?</p>
+                    <label><input type="radio" name="q16" value="A" required> A. Ambitious and long-term.</label>
+                    <label><input type="radio" name="q16" value="B"> B. Practical and achievable.</label>
+                    <label><input type="radio" name="q16" value="C"> C. Flexible and evolving.</label>
+                    <label><input type="radio" name="q16" value="D"> D. Short-term and immediate.</label>
+                </li>
+                <li>
+                    <p>17. How do you prefer to communicate?</p>
+                    <label><input type="radio" name="q17" value="A" required> A. Directly and openly.</label>
+                    <label><input type="radio" name="q17" value="B"> B. Thoughtfully and carefully.</label>
+                    <label><input type="radio" name="q17" value="C"> C. Indirectly and subtly.</label>
+                    <label><input type="radio" name="q17" value="D"> D. Using written communication.</label>
+                </li>
+                <li>
+                    <p>18. How do you approach teamwork?</p>
+                    <label><input type="radio" name="q18" value="A" required> A. Taking on a leadership role.</label>
+                    <label><input type="radio" name="q18" value="B"> B. Collaborating and sharing ideas.</label>
+                    <label><input type="radio" name="q18" value="C"> C. Working independently but contributing.</label>
+                    <label><input type="radio" name="q18" value="D"> D. Supporting and assisting others.</label>
+                </li>
+                <li>
+                    <p>19. What is your preferred way to handle tasks?</p>
+                    <label><input type="radio" name="q19" value="A" required> A. Taking the initiative.</label>
+                    <label><input type="radio" name="q19" value="B"> B. Following detailed instructions.</label>
+                    <label><input type="radio" name="q19" value="C"> C. Prioritizing tasks and making a plan.</label>
+                    <label><input type="radio" name="q19" value="D"> D. Reacting to needs as they arise.</label>
+                </li>
+                <li>
+                    <p>20. How do you handle uncertainty?</p>
+                    <label><input type="radio" name="q20" value="A" required> A. Embracing it as part of life.</label>
+                    <label><input type="radio" name="q20" value="B"> B. Seeking clarity and information.</label>
+                    <label><input type="radio" name="q20" value="C"> C. Making plans to mitigate it.</label>
+                    <label><input type="radio" name="q20" value="D"> D. Avoiding it whenever possible.</label>
+                </li>
+            </ol>
+
+            <button type="submit">Submit Quiz</button>
+        </form>
+
+        <!-- Result Section -->
+        <div class="result" id="result">
+            <h2>According to INTJ your Personality Color is </h2>
+            <p id="resultText"></p>
+        </div>
+
+        <!-- Buy Button Section -->
+        <div class="buy-button" id="buyButton">
+            <a href="Shop.html" target="_blank">Click to Buy Colors</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('quizForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Store quiz answers
+            const form = new FormData(this);
+            const answers = [];
+            for (let [key, value] of form.entries()) {
+                answers.push(value);
+            }
+
+            // Simple scoring logic based on dominant answer choice (A, B, C, D)
+            let countA = answers.filter(answer => answer === 'A').length;
+            let countB = answers.filter(answer => answer === 'B').length;
+            let countC = answers.filter(answer => answer === 'C').length;
+            let countD = answers.filter(answer => answer === 'D').length;
+
+            let resultText = '';
+            if (countA >= countB && countA >= countC && countA >= countD) {
+                resultText = "Bold Red! You're confident and love taking risks.";
+            } else if (countB >= countA && countB >= countC && countB >= countD) {
+                resultText = "Cool Blue! You're calm and prefer peaceful environments.";
+            } else if (countC >= countA && countC >= countB && countC >= countD) {
+                resultText = "Bright Yellow! You're curious and love learning.";
+            } else {
+                resultText = "Soft Lavender! You prefer to avoid stress and enjoy a serene environment.";
+            }
+
+            // Display result
+            document.getElementById('quizForm').style.display = 'none';
+            document.getElementById('resultText').textContent = resultText;
+            document.getElementById('result').style.display = 'block';
+
+            // Display buy button
+            document.getElementById('buyButton').style.display = 'block';
+        });
+    </script>
+</body>
+</html>

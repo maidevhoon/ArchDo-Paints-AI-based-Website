@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Shop - ColorCo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #ff6a88;
+        }
+
+        .product {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product:last-child {
+            border-bottom: none;
+        }
+
+        .color-swatch {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .product-info {
+            flex: 1;
+        }
+
+        .product-info h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+            color: #666;
+        }
+
+        .buy-button {
+            background-color: #ff6a88;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .buy-button:hover {
+            background-color: #ff9a8b;
+        }
+
+        .product-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Color Shop</h1>
+        <div class="product-container">
+            <!-- Product 1 -->
+            <div class="product">
+                <div class="color-swatch" style="background-color: #ff6a88;"></div>
+                <div class="product-info">
+                    <h2>Bold Red</h2>
+                    <p>Price: $25.00</p>
+                    <p>A vibrant and bold color for those who love taking risks.</p>
+                </div>
+                <a href="Red.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product">
+                <div class="color-swatch" style="background-color: #00aaff;"></div>
+                <div class="product-info">
+                    <h2>Cool Blue</h2>
+                    <p>Price: $30.00</p>
+                    <p>A calming blue shade perfect for creating a peaceful environment.</p>
+                </div>
+                <a href="Blue.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product">
+                <div class="color-swatch" style="background-color: #f7e74a;"></div>
+                <div class="product-info">
+                    <h2>Bright Yellow</h2>
+                    <p>Price: $20.00</p>
+                    <p>A cheerful yellow that brings curiosity and joy to any space.</p>
+                </div>
+                <a href="Yellow.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product">
+                <div class="color-swatch" style="background-color: #e6c6e6;"></div>
+                <div class="product-info">
+                    <h2>Soft Lavender</h2>
+                    <p>Price: $22.00</p>
+                    <p>A soothing lavender that promotes relaxation and serenity.</p>
+                </div>
+                <a href="Lavender.html" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
